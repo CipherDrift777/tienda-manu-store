@@ -99,4 +99,56 @@ body{
     color: #dcdcdc;
     transform: scale(1.05);
 }
+
+.btn-tarjeta-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+
+.btn-tarjeta {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #858080;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.7rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+
+.btn-tarjeta:hover {
+    background-color: #1a252f;
+    color: #dcdcdc;
+    transform: scale(1.05);
+}
+
+/* Cards */
+
+.card {
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.card img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card-body {
+    padding: 1rem;
+    background-color: #f8f9fa; 
+}
  
