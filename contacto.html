@@ -25,7 +25,7 @@
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Barra de navegacion -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">ManuStore</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -56,6 +56,46 @@
             </div>
         </div>
     </nav>
+
+    <!-- Main -->
+
+
+    <form action="" method="POST" class="py-5 my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label">Correo: </label>
+                        <input type="email" class="form-control" id="campoEmail" placeholder="tucorreo@correo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="campoMensaje" rows="3"></textarea>
+                    </div>
+                    <div class="col-auto text-center">
+                        <button type="submit" class="btn btn-pide-ahora">Enviar correo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Mapa de la tienda -->
+
+    <div class="container pb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <h2 class="mb-4 text-center">📍 Dónde estamos</h2>
+                <div class="mapa-estilizado">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.7846011991633!2d-0.4657612540420129!3d38.35944793649802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6237757c4baac9%3A0xaa07a08f2e4b9f8d!2sCESA!5e0!3m2!1sen!2ses!4v1745336589411!5m2!1sen!2ses"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-auto">
