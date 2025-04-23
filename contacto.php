@@ -25,39 +25,9 @@
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Barra de navegacion -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">ManuStore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-contenido">
-                <ul class="navbar-nav m-auto my-2 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="hombres.html">Hombre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mujeres.html">Mujeres</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="ofertas.html">Ofertas</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <span><i class="fa-solid fa-heart"></i></span>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="login.html" class="text-decoration-none text-dark">
-                        <span><i class="fa-solid fa-user" href="#"></i></span>
-                    </a>
-                </form>
-            </div>
-        </div>
-    </nav>
+    <?php
+    include_once "menu.php";
+    ?>
 
     <!-- Main -->
 

@@ -25,56 +25,25 @@
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Barra de navegacion -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">ManuStore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-contenido">
-                <ul class="navbar-nav m-auto my-2 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="hombres.html">Hombre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mujeres.html">Mujeres</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="ofertas.html">Ofertas</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <span><i class="fa-solid fa-heart"></i></span>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <a href="login.html" class="text-decoration-none text-dark">
-                        <span><i class="fa-solid fa-user" href="#"></i></span>
-                    </a>
-                </form>
-            </div>
-        </div>
-    </nav>
-
+    <?php
+    include_once "menu.php";
+    ?>
 
     <!-- Main -->
 
     <section class="producto py-5">
         <div class="container py-5">
-            <h1 class="fw-bold text-uppercase pt-5">Catálogo para Mujeres</h1>
+            <h1 class="fw-bold text-uppercase pt-5">Catálogo para Hombres</h1>
             <div class="row pt-5">
                 <!-- inicio  c-1 -->
                 <div class="col-lg-3 py-3">
                     <div class="card border-0">
                         <div class="card-body py-5 bg-light">
-                            <img src="img/productos_mujer/1camisa_azul.jpg" alt="" class="img-fluid">
+                            <img src="img/productos_hombre/1camiseta.png" alt="" class="img-fluid">
                         </div>
                         <div class="card-footer border-0 text-center bg-white">
-                            <h5 class="fw-bold ">Camisa Azul Celeste</h5>
-                            <p class="m-0 lead">36,99€</p>
+                            <h5 class="fw-bold ">Camiseta Beige</h5>
+                            <p class="m-0 lead">24,99€</p>
                             <button class="btn btn-pide-ahora">Comprar</button>
                         </div>
                     </div>
@@ -84,7 +53,7 @@
                 <div class="col-lg-3 py-3">
                     <div class="card border-0">
                         <div class="card-body py-5 bg-light">
-                            <img src="img/productos_mujer/2camisa_blanca.jpg" alt="" class="img-fluid">
+                            <img src="img/productos_hombre/2camisa.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="card-footer border-0 text-center bg-white">
                             <h5 class="fw-bold ">Camisa Blanca</h5>
@@ -98,11 +67,11 @@
                 <div class="col-lg-3 py-3">
                     <div class="card border-0">
                         <div class="card-body py-5 bg-light">
-                            <img src="img/productos_mujer/3camisa_rallas.jpg" alt="" class="img-fluid">
+                            <img src="img/productos_hombre/3camisa_azul_marino.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="card-footer border-0 text-center bg-white">
-                            <h5 class="fw-bold ">Camisa Rayas</h5>
-                            <p class="m-0 lead">34,99€</p>
+                            <h5 class="fw-bold ">Camisa Azul Marino</h5>
+                            <p class="m-0 lead">39,99€</p>
                             <button class="btn btn-pide-ahora">Comprar</button>
                         </div>
                     </div>
@@ -112,11 +81,11 @@
                 <div class="col-lg-3 py-3">
                     <div class="card border-0">
                         <div class="card-body py-5 bg-light">
-                            <img src="img/productos_mujer/4polo.jpg" alt="" class="img-fluid">
+                            <img src="img/productos_hombre/4chemise.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="card-footer border-0 text-center bg-white">
-                            <h5 class="fw-bold ">Polo Beige</h5>
-                            <p class="m-0 lead">24,99€</p>
+                            <h5 class="fw-bold ">Polo Blanca</h5>
+                            <p class="m-0 lead">29,99€</p>
                             <button class="btn btn-pide-ahora">Comprar</button>
                         </div>
                     </div>
@@ -126,11 +95,11 @@
                 <div class="col-lg-3 py-3">
                     <div class="card border-0">
                         <div class="card-body py-5 bg-light">
-                            <img src="img/productos_mujer/5polo_blanca.jpg" alt="" class="img-fluid">
+                            <img src="img/productos_hombre/5kaki_sudadera.png" alt="" class="img-fluid">
                         </div>
                         <div class="card-footer border-0 text-center bg-white">
-                            <h5 class="fw-bold ">Polo Blanca</h5>
-                            <p class="m-0 lead">24,99€</p>
+                            <h5 class="fw-bold ">Sudadera Kaki</h5>
+                            <p class="m-0 lead">34,99€</p>
                             <button class="btn btn-pide-ahora">Comprar</button>
                         </div>
                     </div>
@@ -140,10 +109,10 @@
                 <div class="col-lg-3 py-3">
                     <div class="card border-0">
                         <div class="card-body py-5 bg-light">
-                            <img src="img/productos_mujer/6polo_blanca_marron.jpg" alt="" class="img-fluid">
+                            <img src="img/productos_hombre/6polo_negra.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="card-footer border-0 text-center bg-white">
-                            <h5 class="fw-bold ">Polo Blanca y Beige</h5>
+                            <h5 class="fw-bold ">Polo Negra Casual</h5>
                             <p class="m-0 lead">24,99€</p>
                             <button class="btn btn-pide-ahora">Comprar</button>
                         </div>
@@ -154,11 +123,11 @@
                 <div class="col-lg-3 py-3">
                     <div class="card border-0">
                         <div class="card-body py-5 bg-light">
-                            <img src="img/productos_mujer/7sueter_cuello_redondo.jpg" alt="" class="img-fluid">
+                            <img src="img/productos_hombre/7polo_rayas_blancas.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="card-footer border-0 text-center bg-white">
-                            <h5 class="fw-bold ">Sudadera de Lana</h5>
-                            <p class="m-0 lead">29,99€</p>
+                            <h5 class="fw-bold ">Polo Blanca Rayas</h5>
+                            <p class="m-0 lead">24,99€</p>
                             <button class="btn btn-pide-ahora">Comprar</button>
                         </div>
                     </div>
@@ -168,11 +137,11 @@
                 <div class="col-lg-3 py-3">
                     <div class="card border-0">
                         <div class="card-body py-5 bg-light">
-                            <img src="img/productos_mujer/8top_seda_sin_mangas.jpg" alt="" class="img-fluid">
+                            <img src="img/productos_hombre/8polo_verde.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="card-footer border-0 text-center bg-white">
-                            <h5 class="fw-bold ">Top de Seda</h5>
-                            <p class="m-0 lead">29,99€</p>
+                            <h5 class="fw-bold ">Polo Verde</h5>
+                            <p class="m-0 lead">24,99€</p>
                             <button class="btn btn-pide-ahora">Comprar</button>
                         </div>
                     </div>
@@ -216,6 +185,8 @@
             </div>
         </div>
     </footer>
+    </footer>
+
     <!-- CDN Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"

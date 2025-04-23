@@ -8,7 +8,7 @@ if (isset($_POST['usuario']) && isset($_POST['pass'])) {
         $_SESSION['identificado'] = true;
         echo 'has entrado';
 
-        header('location: ofertas.html');
+        header('location: ofertas.php');
 
         exit;
     } else {
