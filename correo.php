@@ -39,8 +39,10 @@ try {
 
     $mail->send();
 
+    header('location: contacto.html');
 
-    // echo 'Se ha enviado el correo exitosamente';
+
+    echo 'Se ha enviado el correo exitosamente';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
