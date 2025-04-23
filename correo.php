@@ -39,7 +39,7 @@ try {
 
     $mail->send();
 
-    header('location: contacto.html');
+    header('location: contacto.php');
 
 
     echo 'Se ha enviado el correo exitosamente';
