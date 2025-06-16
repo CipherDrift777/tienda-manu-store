@@ -96,7 +96,7 @@ session_start();
 
     <section class="next py-5">
         <div class="container py-5">
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify">
                 <h1 class="fw-bold text-uppercase">Nueva Temporada</h1>
                 <!-- Hombres -->
                 <div class="col-lg-4">

@@ -28,7 +28,7 @@
                  <!-- Ícono de Login solo en móviles -->
                  <?php if (!isset($_SESSION['identificado']) || $_SESSION['identificado'] !== true): ?>
                      <li class="nav-item d-lg-none">
-                         <a class="nav-link text-dark" href="login.php">
+                         <a class="nav-link" href="login.php">
                              <i class="fa-solid fa-user me-2"></i> Iniciar sesión
                          </a>
                      </li>
@@ -36,7 +36,7 @@
                  <!-- Ícono de Logout solo si está identificado -->
                  <?php if (isset($_SESSION['identificado']) && $_SESSION['identificado'] === true): ?>
                      <li class="nav-item d-lg-none">
-                         <a class="nav-link text-dark" href="logout.php">
+                         <a class="nav-link" href="logout.php">
                              <i class="fa-solid fa-right-from-bracket me-2"></i> Cerrar sesión
                          </a>
                      </li>
