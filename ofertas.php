@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['identificado']) || $_SESSION['identificado'] !== true) {
+if (!isset($_SESSION['identificado']) || !isset($_SESSION['usuario'])) {
     header('location: login.php');
+    exit();
 }
 ?>
 <!DOCTYPE html>

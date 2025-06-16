@@ -1,7 +1,7 @@
 <?php
 session_start();
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,7 +86,9 @@ session_start();
                     <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
-            <a href="login.php" class="btn-pide-ahora mt-3">Pide ahora mismo</a>
+            <button class="btn-pide-ahora mt-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Pide ahora mismo
+            </button>
         </div>
     </section>
 
@@ -94,7 +96,7 @@ session_start();
 
     <section class="next py-5">
         <div class="container py-5">
-            <div class="row g-4">
+            <div class="row g-4 justify-content-center">
                 <h1 class="fw-bold text-uppercase">Nueva Temporada</h1>
                 <!-- Hombres -->
                 <div class="col-lg-4">
@@ -102,7 +104,7 @@ session_start();
                         <img src="img/card1.jpg" class="card-img" alt="...">
                         <div class="card-img-overlay d-flex justify-content-center align-items-center">
                             <div class="btn-tarjeta-container">
-                                <a href="hombres.html"
+                                <a href="hombres.php"
                                     class="btn-pide-ahora text-decoration-none text-white">Hombres</a>
                             </div>
                         </div>
@@ -114,34 +116,28 @@ session_start();
                         <img src="img/card2.jpg" class="card-img" alt="...">
                         <div class="card-img-overlay d-flex justify-content-center align-items-center">
                             <div class="btn-tarjeta-container">
-                                <a href="mujeres.html"
+                                <a href="mujeres.php"
                                     class="btn-pide-ahora text-decoration-none text-white">Mujeres</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Ofertas -->
-                <?php
-
-
-                // if (isset($_SESSION['identificado']) && $_SESSION['identificado'] == true) {
-                // 
-                ?>
-                <div class="col-lg-4">
-                    <div class="card text-white">
-                        <img src="img/card3.png" class="card-img" alt="...">
-                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                            <div class="btn-tarjeta-container">
-                                <a href="ofertas.html"
-                                    class="btn-pide-ahora text-decoration-none text-white">Ofertas</a>
+                <?php if (isset($_SESSION['usuario'])): ?>
+                    <div class="col-lg-4">
+                        <div class="card text-white">
+                            <img src="img/card3.png" class="card-img" alt="...">
+                            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                <div class="btn-tarjeta-container">
+                                    <a href="ofertas.php"
+                                        class="btn-pide-ahora text-decoration-none text-white">Ofertas</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                <?php endif; ?>
             </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-auto">
@@ -182,6 +178,45 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="validar.php" method="POST" autocomplete="off">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Inicia sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div id="mensajeError" class="alert alert-danger d-none" role="alert">
+                            Usuario o contraseña incorrectos.
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Correo electrónico" name="usuario">
+                            <label for="floatingInput">Correo electrónico</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" name="pass">
+                            <label for="floatingPassword">Contraseña</label>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="remember-me" id="checkDefault">
+                            <label class="form-check-label" for="checkDefault">Recuérdame</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-pide-ahora w-100 py-2" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

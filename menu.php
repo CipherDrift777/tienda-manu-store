@@ -25,19 +25,38 @@
                  <li class="nav-item dropdown">
                      <a class="nav-link" href="contacto.php">Contacto</a>
                  </li>
-                 <li class="nav-item dropdown  d-lg-none">
-                     <a class="nav-link text-white" href="login.php">Login
-
-                     </a>
-                 </li>
+                 <!-- Ícono de Login solo en móviles -->
+                 <?php if (!isset($_SESSION['identificado']) || $_SESSION['identificado'] !== true): ?>
+                     <li class="nav-item d-lg-none">
+                         <a class="nav-link text-dark" href="login.php">
+                             <i class="fa-solid fa-user me-2"></i> Iniciar sesión
+                         </a>
+                     </li>
+                 <?php endif; ?>
+                 <!-- Ícono de Logout solo si está identificado -->
+                 <?php if (isset($_SESSION['identificado']) && $_SESSION['identificado'] === true): ?>
+                     <li class="nav-item d-lg-none">
+                         <a class="nav-link text-dark" href="logout.php">
+                             <i class="fa-solid fa-right-from-bracket me-2"></i> Cerrar sesión
+                         </a>
+                     </li>
+                 <?php endif; ?>
              </ul>
          </div>
 
-         <!-- ICONO SOLO EN ESCRITORIO -->
-         <div class="d-none d-lg-block">
-             <a href="login.php" class="text-decoration-none text-dark d-flex align-items-center">
-                 <i class="fa-solid fa-user fs-5"></i>
-             </a>
+         <!-- ICONOS SOLO EN ESCRITORIO -->
+         <div class="d-none d-lg-flex gap-3 align-items-center">
+             <!-- Icono de login -->
+             <?php if (!isset($_SESSION['identificado']) || $_SESSION['identificado'] !== true): ?>
+                 <a href="login.php" class="text-decoration-none text-dark" title="Iniciar sesión">
+                     <i class="fa-solid fa-user fs-5"></i>
+                 </a>
+             <?php endif; ?>
+             <!-- Icono de logout si está identificado -->
+             <?php if (isset($_SESSION['identificado']) && $_SESSION['identificado'] === true): ?>
+                 <a href="logout.php" class="text-decoration-none text-dark" title="Cerrar sesión">
+                     <i class="fa-solid fa-right-from-bracket fs-5"></i>
+                 </a>
+             <?php endif; ?>
          </div>
-     </div>
  </nav>

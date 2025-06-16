@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +28,9 @@
     <main class="form-signin w-100 m-auto">
         <form action="validar.php" method="POST" autocomplete="off">
             <div class="mb-4">
+                <div id="mensajeError" class="alert alert-danger d-none" role="alert">
+                    Usuario o contraseña incorrectos.
+                </div>
                 <h1 class="h3 mb-3 fw-normal">Inicia sesión</h1>
 
                 <div class="form-floating">
@@ -57,6 +57,7 @@
             </p>
         </form>
     </main>
+    <script src="app.js"></script>
 </body>
 
 </html>
