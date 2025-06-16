@@ -6,7 +6,7 @@ if (isset($_POST['usuario']) && isset($_POST['pass'])) {
     if ($_POST['usuario'] === 'admin' && $_POST['pass'] == '123') {
 
         $_SESSION['identificado'] = true;
-        echo 'has entrado';
+
 
         header('location: ofertas.php');
 
@@ -14,7 +14,6 @@ if (isset($_POST['usuario']) && isset($_POST['pass'])) {
     } else {
 
         $_SESSION['identificado'] = false;
-        echo 'incorrecto';
     }
 }
 

@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <div class="mb-3">
+                    <div class="my-3">
                         <label class="form-label">Correo: </label>
                         <input name="email" type="email" class="form-control" id="campoEmail"
                             placeholder="tucorreo@correo.com">

@@ -86,14 +86,14 @@ session_start();
                     <span class="visually-hidden">Siguiente</span>
                 </button>
             </div>
-            <a href="login.html" class="btn-pide-ahora mt-3">Pide ahora mismo</a>
+            <a href="login.php" class="btn-pide-ahora mt-3">Pide ahora mismo</a>
         </div>
     </section>
 
     <!-- Tarjetas para mas contenido -->
 
     <section class="next py-5">
-        <div class="container-fluid py-5">
+        <div class="container py-5">
             <div class="row g-4">
                 <h1 class="fw-bold text-uppercase">Nueva Temporada</h1>
                 <!-- Hombres -->

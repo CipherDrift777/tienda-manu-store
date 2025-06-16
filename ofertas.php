@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+if (!isset($_SESSION['identificado']) || $_SESSION['identificado'] !== true) {
+    header('location: login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
