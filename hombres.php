@@ -36,7 +36,7 @@ session_start();
 
     <section class="producto py-5">
         <div class="container py-5">
-            <h1 class="fw-bold text-uppercase pt-5">Catálogo para Hombres</h1>
+            <h1 class="fw-bold text-uppercase pt-5 text-center">Catálogo para Hombres</h1>
             <div class="row pt-5">
                 <!-- inicio  c-1 -->
                 <div class="col-lg-3 py-3">

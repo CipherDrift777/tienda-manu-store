@@ -55,6 +55,9 @@
             <p class="d-flex justify-content-center py-2">
                 &copy; 2025
             </p>
+            <div class="text-center mt-3">
+                ¿No tienes cuenta? <a href="registro.php">Regístrate aquí</a>
+            </div>
         </form>
     </main>
     <script src="app.js"></script>

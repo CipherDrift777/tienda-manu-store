@@ -2,6 +2,7 @@
 session_start();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +36,7 @@ session_start();
     <!-- Main -->
     <section class="main bg-light py-5">
         <div class="container text-center">
-            <h2 class="mb-4">Nuestra Colección</h2>
+            <h1 class="mb-4 fw-bold text-uppercase">Nuestra Colección</h1>
 
             <div id="carruselManuStore" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"
                 data-bs-pause="hover">
@@ -96,8 +97,8 @@ session_start();
 
     <section class="next py-5">
         <div class="container py-5">
-            <div class="row g-4 justify">
-                <h1 class="fw-bold text-uppercase">Nueva Temporada</h1>
+            <div class="row g-4 justify-content-center">
+                <h1 class="fw-bold text-uppercase text-center">Nueva Temporada</h1>
                 <!-- Hombres -->
                 <div class="col-lg-4">
                     <div class="card text-white">

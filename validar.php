@@ -1,21 +1,27 @@
 <?php
 session_start();
+require 'db/conexion.php';
 
-if (isset($_POST['usuario']) && isset($_POST['pass'])) {
+$usuario = $_POST['usuario'];
+$pass = $_POST['pass'];
 
-    if ($_POST['usuario'] === 'admin' && $_POST['pass'] == '123') {
+$sql = "SELECT * FROM usuarios WHERE email = ?";
+$stmt = $conexion->prepare($sql);
+$stmt->execute([$usuario]);
+$usuarioBD = $stmt->fetch();
 
-        $_SESSION['identificado'] = true;
-        $_SESSION['usuario'] = $_POST['usuario'];
-
-
-        header('location: index.php');
-
-        exit;
-    } else {
-
-        $_SESSION['identificado'] = false;
-        header('location: login.php?error=1"');
-        exit();
-    }
+if ($usuarioBD && password_verify($pass, $usuarioBD['password'])) {
+    $_SESSION['usuario'] = $usuarioBD['nombre'];
+    $_SESSION['email'] = $usuarioBD['email'];
+    $_SESSION['rol'] = $usuarioBD['rol_id'];
+    $_SESSION['id'] = $usuarioBD['id'];
+    $_SESSION['identificado'] = true;
+    header("Location: index.php");
+    exit;
+} else {
+    echo "<script>
+        alert('Correo o contraseña incorrectos.');
+        window.location.href='index.php?error=1';
+    </script>";
+    exit;
 }

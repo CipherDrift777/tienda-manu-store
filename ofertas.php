@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['identificado']) || !isset($_SESSION['usuario'])) {
-    header('location: login.php');
+if (!isset($_SESSION['usuario'])) {
+    header('location: index.php');
     exit();
 }
 ?>
